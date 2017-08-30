@@ -2,10 +2,13 @@
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
+import { WebApiBaseService } from './webapi.base.service';
 
 @Injectable()
-export class AuthenticationService {
-    constructor(private http: Http) { }
+export class AuthenticationService extends WebApiBaseService {
+    constructor(http: Http) {
+        super(http);
+    }
 
     login(username: string, password: string) {
 
@@ -13,7 +16,7 @@ export class AuthenticationService {
         var headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-        return this.http.post('http://7kspatest.azurewebsites.net/Token', body, {headers: headers})
+        return this.http.post(this.BASE_API_URL + '/Token', body, { headers: headers })
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let user = response.json();
