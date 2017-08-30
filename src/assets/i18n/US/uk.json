@@ -1,0 +1,135 @@
+﻿{
+  "login": {
+    "title": "7k Market",
+    "signup_link": "Реєстрація",
+    "email": "Email",
+    "password": "Пароль",
+    "sign_in": "Увійти",
+    "forgot_password": "Забули пароль?",
+    "sign_from_app_text": "Увійти задопомогою",
+    "share_on_facebook": "Facebook",
+    "share_on_twitter": "Twitter",
+    "share_on_google_plus": "Google Plus"
+  },
+  "general": {
+    "akveo": "Akveo",
+    "home": "Home",
+    "forms": {
+      "option1": "Option 1"
+    },
+    "menu": {
+      "dashboard": "Головна",
+      "catalog": "Каталог",
+      "orders": "Замовлення",
+      "editors": "Editors",
+      "ck_editor": "CKEditor",
+      "components": "Components",
+      "tree_view": "Tree View",
+      "charts": "Charts",
+      "chartist_js": "Chartist.Js",
+      "ui_features": "UI Features",
+      "typography": "Typography",
+      "buttons": "Buttons",
+      "icons": "Icons",
+      "modals": "Modals",
+      "grid": "Grid",
+      "form_elements": "Form Elements",
+      "form_inputs": "Form Inputs",
+      "form_layouts": "Form Layouts",
+      "tables": "Tables",
+      "basic_tables": "Basic Tables",
+      "smart_tables": "Smart Tables",
+      "maps": "Maps",
+      "google_maps": "Google Maps",
+      "leaflet_maps": "Leaflet Maps",
+      "bubble_maps": "Bubble Maps",
+      "line_maps": "Line Maps",
+      "pages": "Pages",
+      "login": "Login",
+      "register": "Register",
+      "menu_level_1": "Menu Level 1",
+      "menu_level_1_1": "Menu Level 1.1",
+      "menu_level_1_2": "Menu Level 1.2",
+      "menu_level_1_2_1": "Menu Level 1.2.1",
+      "external_link": "External Link"
+    },
+    "created_with": "Created with"
+  },
+  "dashboard": {
+    "acquisition_channels": "Acquisition Channels",
+    "users_by_country": "Users by Country",
+    "revenue": "Revenue",
+    "feed": "Feed",
+    "todo_list": "To Do List",
+    "calendar": "Calendar",
+    "new_visits": "New Visits",
+    "purchases": "Purchases",
+    "active_users": "Active Users",
+    "returned": "Returned",
+    "popular_app": {
+      "super_app": "Super App",
+      "most_popular_app": "Most Popular App",
+      "total_visits": "Total Visits",
+      "new_visits": "New Visits",
+      "sales": "Sales"
+    },
+    "todo": {
+      "task_todo": "Task to do.."
+    },
+    "traffic_chart": {
+      "view_total": "Views Total"
+    }
+  },
+  "catalog": {
+    "catsTree": "Категорії",
+    "productTitle": "Товари",
+    "products": {
+      "article": "Артикул",
+      "name": "Назва",
+      "packing_type": "Тип упаковки",
+      "unit_weight": "Вага одиниці",
+      "order_cardinality": "Мін замовлення",
+      "unit_price_with_tax": "Ціна за одиницю"
+
+    },
+    "basket": {
+      "quantity": "Кількість",
+      "ammount": "Вартість",
+      "totalPlaces": "Кількість місць",
+      "totalWeight": "Загальна вага",
+      "totalSum": "Загальна вартість"
+    }
+  },
+
+  "basket": {
+    "basketTitle": "Корзина"
+
+  },
+
+  "tree_view": {
+    "title": "basic",
+    "programming": "Programming languages by programming paradigm",
+    "oop": "Object-oriented programming",
+    "java": "Java",
+    "c_plus_plus": "C++",
+    "c_sharp": "C#",
+    "prototype": "Prototype-based programming",
+    "java_script": "JavaScript",
+    "coffee_script": "CoffeeScript",
+    "lua": "Lua"
+  },
+  "chart": {
+    "lines": "Lines",
+    "bars": "Bars",
+    "simple_line_chart": "Simple line chart",
+    "line_chart": "Line chart with area",
+    "bi_polar_line_chart": "Bi-polar line chart with area only",
+    "simple_bar_chart": "Simple bar chart",
+    "multi_line_labels_bar_chart": "Multi-line labels bar chart",
+    "stacked_bar_chart": "Stacked bar chart",
+    "pies_and_donuts": "Pies & Donuts",
+    "simple_pie": "Simple Pie",
+    "pie_with_labels": "Pie with labels",
+    "donut": "Donut"
+  }
+}

@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-3">
+        <ba-card cardTitle="catalog.catsTree">
+
+            <tree-root #tree [nodes]="nodes"
+                       [options]="customTemplateStringOptions"
+                       [focused]="true"
+                       (event)="onEvent($event)">
+
+            </tree-root>
+        </ba-card>
+    </div>
+
+    <div class="col-md-9">
+        <products-table [category]="selectedCategory"></products-table>
+    </div>
+</div>

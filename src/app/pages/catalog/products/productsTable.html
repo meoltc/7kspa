@@ -1,0 +1,41 @@
+
+<ba-card *ngIf="data.length" [cardTitle]="category.name">
+    <div class="panel panel-default">
+        <table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+            <thead>
+                <tr>
+                    <th style="text-align:left;width: 15%" translate>catalog.products.article</th>
+                    <th style="text-align:left;width: 40%" translate>catalog.products.name</th>
+                    <th style="text-align:left;width: 15%" translate>catalog.products.packing_type</th>
+                    <th style="text-align:right;width: 10%" translate>catalog.products.unit_weight</th>
+                    <th style="text-align:right;width: 10%" translate>catalog.products.unit_price_with_tax</th>
+                    <th style="text-align:right;width: 5%" translate>catalog.products.order_cardinality</th>
+                    <th style="width: 5%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of mf.data">
+                    <td style="text-align:left">{{item.article}}</td>
+                    <td style="text-align:left"><a routerLink="/pages/catalog/products/{{item.goods_group}}/product/{{item.gid}}" >{{item.name}}</a></td>
+                    <td style="text-align:left">{{item.pack.name}}</td>
+                    <td class="text-right">{{item.unit_weight | number:'1.2-4'}}</td>
+                    <td class="text-right">{{item.price_with_tax | number:'1.2-4'}}</td>
+                    <td class="text-right">{{item.min_order_cardinality}} {{item.unit.short_name}}</td>
+                    <td class="text-right">
+                        <div *ngIf="item.price_with_tax">
+                            <button *ngIf="!item.isInBasket" (click)="toggleBi(item)" class="btn btn-success">+</button>
+                            <button *ngIf="item.isInBasket" (click)="toggleBi(item)" class="btn btn-danger">x</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <!--<tfoot>
+                <tr>
+                    <td colspan="5">
+                        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>
+                    </td>
+                </tr>
+            </tfoot>-->
+        </table>
+    </div>
+</ba-card>
