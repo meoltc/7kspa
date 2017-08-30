@@ -103,7 +103,7 @@ export class BasketService extends WebApiBaseService {
     }
 
     clearBasket() {
-        BasketService._itemsCache = {};
+        for (var gid in BasketService._itemsCache) delete BasketService._itemsCache[gid];
         this.m_itemsCache = BasketService._itemsCache;
         localStorage.setItem('CACHE_CURR_BASKET', JSON.stringify(this.m_itemsCache));
         return Observable.create(observer => {
