@@ -8,6 +8,7 @@ import { Login } from './login.component';
 import { routing } from './login.routing';
 import { AuthenticationService } from '../../services/authentication.service';
 
+import { DefaultModalModule } from '../../theme/components/modals/default-modal.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { AuthenticationService } from '../../services/authentication.service';
     ReactiveFormsModule,
     FormsModule,
     NgaModule,
+    DefaultModalModule,
     routing
   ],
   declarations: [
