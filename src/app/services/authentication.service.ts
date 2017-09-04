@@ -29,6 +29,15 @@ export class AuthenticationService extends WebApiBaseService {
             });
     }
 
+    register(usrObj) {
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post(this.BASE_API_URL + '/api/user/register', JSON.stringify(usrObj), { headers: headers })
+            .map((response: Response) => {
+                return response.json();
+            });
+    }
+
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');

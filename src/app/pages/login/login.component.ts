@@ -1,4 +1,4 @@
-﻿import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { AuthenticationService } from '../../services/authentication.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -44,7 +44,7 @@ export class Login {
 
     public onSubmit(values: Object): void {
         this.submitted = true;
-
+        alert('bbbbbbbbbbbbbbbb');
         if (this.form.valid) {
             this.authenticationService.login(this.email.value, this.password.value)
                 .subscribe(
@@ -58,3 +58,8 @@ export class Login {
         }
     }
 }
+
+
+
+// WEBPACK FOOTER //
+// ./src/app/pages/login/login.component.ts

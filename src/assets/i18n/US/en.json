@@ -11,6 +11,10 @@
     "share_on_twitter": "Share on Twitter",
     "share_on_google_plus": "Share on Google Plus"
   },
+  "register": {
+    "regTitle": "Sign up to 7kMarket",
+    "signUp":  "Sign up"
+  },
   "general": {
     "akveo": "Akveo",
     "home": "Home",

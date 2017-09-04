@@ -11,6 +11,9 @@
     "share_on_twitter": "Twitter",
     "share_on_google_plus": "Google Plus"
   },
+  "register": {
+    "regTitle": "Реєстрація в 7kMarket"
+  },
   "general": {
     "akveo": "Akveo",
     "home": "Home",
