@@ -2,9 +2,10 @@ import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
-
+import { AppTranslationModule } from '../../app.translation.module';
 import { Register } from './register.component';
-import { routing }       from './register.routing';
+import { routing } from './register.routing';
+import { AuthenticationService } from '../../services/authentication.service';
 
 
 @NgModule({
@@ -13,10 +14,12 @@ import { routing }       from './register.routing';
     ReactiveFormsModule,
     FormsModule,
     NgaModule,
-    routing
+      routing,
+      AppTranslationModule
   ],
   declarations: [
     Register
-  ]
+  ],
+  providers: [AuthenticationService]
 })
 export class RegisterModule {}
