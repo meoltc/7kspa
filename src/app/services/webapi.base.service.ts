@@ -6,11 +6,11 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class WebApiBaseService {
 
-    //public BASE_API_URL: string = 'http://7kspatest.azurewebsites.net';
+    public BASE_API_URL: string = 'http://7kspatest.azurewebsites.net';
 
     //public BASE_API_URL: string = 'http://localhost:38775';
 
-    public BASE_API_URL: string = '';
+    //public BASE_API_URL: string = '';
 
     constructor(protected http: Http) { }
 

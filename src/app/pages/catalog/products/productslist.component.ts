@@ -21,6 +21,26 @@ export class ProductsList {
         private router: Router,
     ) {
     }
+    
+    ngOnDestroy() {
+        this.saveTreeState();
+        console.log("ngOnDestroy()");
+    }    
+    
+    saveTreeState() {
+        let state=this.tree.treeModel.getState();
+        localStorage.setItem('treeState',JSON.stringify(state));
+    } 
+
+    restoreTreeState() {
+        if(!localStorage.treeState) 
+            return;
+        let treeState=JSON.parse(localStorage.treeState);
+        this.tree.treeModel.setState(treeState);
+        if(localStorage.currentGid) 
+            this.router.navigate(['/pages', 'catalog', 'products', localStorage.currentGid.toString()]);            
+    }    
+    
     ngOnInit() {
 
         this.route.params
@@ -57,13 +77,11 @@ export class ProductsList {
                         this.tree.treeModel.update();
                     }
                 }
-
             },
             error => {
                 //this.alertService.error(error);
                 //this.submitted = false;
             });
-
 
     }
 
@@ -89,9 +107,17 @@ export class ProductsList {
         idField: 'gid'
     }
     onEvent(event) {
+        let currentGid;
 
+        //console.log("EVENT name",event.eventName);
+
+        if(event.eventName == 'initialized') 
+            this.restoreTreeState();
+            
         if (event.eventName == 'activate') {
-            this.router.navigate(['/pages', 'catalog', 'products', event.node.data.gid.toString()]);
+            currentGid=event.node.data.gid;
+            this.router.navigate(['/pages', 'catalog', 'products', currentGid.toString()]);
+            localStorage.setItem("currentGid",currentGid);
             //this.router.navigate(['/pages', 'catalog', 'products', event.node.data.gid.toString()], { queryParams: { group: event.node.data.gid } });
             //this.selectedCategory = event.node.data;
         }
